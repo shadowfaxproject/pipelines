@@ -66,7 +66,7 @@ class Pipeline:
         pass
 
     def pipe(
-        self, user_message: str, model_id: str, messages: List[dict], body: dict
+            self, user_message: str, model_id: str, messages: List[dict], body: dict
     ) -> Union[str, Generator, Iterator]:
         # This is where you can add your custom pipelines like RAG.
         print(f"pipe:{__name__}")
@@ -98,7 +98,9 @@ class Pipeline:
 
             elif "END-STAGE-IDEA".lower() in assistant_response.lower():
                 idea_query = assistant_response = self.llm.invoke(
-                    PromptTemplate(template=self.gift_idea_summary_template, input_variables=["conversation_history"]).format_prompt(conversation_history=self.conversation.memory).to_string())
+                    PromptTemplate(template=self.gift_idea_summary_template,
+                                   input_variables=["conversation_history"]).
+                    format_prompt(conversation_history=self.conversation.memory).to_string())
                 print(f"Idea query: {idea_query}")
                 print("######################################")
 

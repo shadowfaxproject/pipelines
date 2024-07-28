@@ -7,21 +7,21 @@ grpcio
 
 passlib==1.7.4
 passlib[bcrypt]
-PyJWT[crypto]
+PyJWT[crypto]~=2.8.0
 
 requests==2.32.2
 aiohttp==3.9.5
 httpx
 
 # AI libraries
-openai
-anthropic
+openai~=1.32.0
+anthropic~=0.31.2
 google-generativeai
 
 # Database
 pymongo
 peewee
-SQLAlchemy
+SQLAlchemy~=2.0.30
 boto3
 redis
 sqlmodel
@@ -29,8 +29,8 @@ chromadb
 psycopg2-binary
 
 # Observability
-langfuse
-ddtrace
+langfuse~=2.33.0
+ddtrace~=2.9.3
 
 # ML libraries
 torch
@@ -63,3 +63,10 @@ beautifulsoup4
 # Llama Index for RAG
 llama-index
 llama-index-llms-ollama
+starlette~=0.37.2
+pytz~=2024.1
+huggingface-hub~=0.23.0
+psutil~=5.9.8
+pyyaml~=6.0.1
+python-dotenv~=1.0.1
+langchain~=0.2.0
